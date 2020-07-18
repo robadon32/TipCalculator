@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="textView_billAmountHint">Amount</string>
+    <string name="tip_percentage">15%</string>
+    <string name="tip_view">Tip</string>
+    <string name="total_view">Total</string>
+    <string name="starting_amount">$0.00</string>
+</resources>
