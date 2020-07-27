@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    android:background="#D1D8D8"
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/editText_BillAmount"
@@ -14,21 +15,22 @@
         android:layout_column="0"
         android:layout_columnSpan="2"
         android:ems="10"
-        android:hint="Enter Amount"
+        android:hint="@string/enter_amount"
         android:inputType="number"
         android:maxLength="6"
         android:padding="@dimen/padding_textView_default"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/textView_BillAmount"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_column="0"
         android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:background="#8AC9DD"
+        android:background="#85AEC4"
+        android:contentDescription="@string/textView_billAmountHint"
         android:hint="@string/textView_billAmountHint"
         android:labelFor="@+id/editText_BillAmount"
         android:padding="@dimen/padding_textView_default"
@@ -42,9 +44,7 @@
         android:layout_row="1"
         android:layout_column="1"
         android:max="30"
-        android:progress="15"
-        android:tickMark="@color/colorPrimary" />
-
+        android:progress="15"/>
     <TextView
         android:id="@+id/textView_percent"
         android:layout_width="47dp"
@@ -95,7 +95,96 @@
         android:textAlignment="center"
         android:textSize="16sp" />
 
-    <!-- more goes here -->
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:background="#85AEC4"
+        android:onClick="calculate"
+        android:text="@string/calculate" />
 
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_marginStart="225dp"
+        android:background="#85AEC4"
+        android:onClick="reset"
+        android:text="@string/reset" />
+
+    <Spinner
+        android:id="@+id/number_of_people"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="35dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:text="Amount of People"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/per_person_total"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="75dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:text="@string/per_person_price"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_marginLeft="10dp"
+        android:text="Rounding Options"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/round_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_columnSpan="2">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_button_one"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_button_two"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_button_three"/>
+    </RadioGroup>
+
+    <!-- more goes here -->
 
 </GridLayout>

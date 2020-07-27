@@ -5,4 +5,25 @@
     <string name="tip_view">Tip</string>
     <string name="total_view">Total</string>
     <string name="starting_amount">$0.00</string>
+    <string name="calculate">Calculate</string>
+    <string name="reset">Reset</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="per_person_price">Per Person: \n</string>
+    <string name="radio_button_one">No</string>
+    <string name="radio_button_two">Tip</string>
+    <string name="radio_button_three">Total</string>
+    <string name="share_menu">Share</string>
+    <string name="info_menu">Info</string>
+    <string-array name="amount_of_people">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>
