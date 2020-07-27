@@ -1,5 +1,6 @@
 package com.example.tipcalculator;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 import java.text.NumberFormat;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ShareCompat;
 
@@ -260,12 +262,22 @@ public class MainActivity extends AppCompatActivity
                 sendText();
                 break;
             case R.id.info:
-                Toast.makeText(this,
-                        "The spinner allows the user to pick how many people to split the bill with.",
-                        Toast.LENGTH_LONG).show();
+                showInfo();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showInfo() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Information");
+        alertDialog.setMessage("The spinner allows the user to pick how many people to split the bill with.");
+        alertDialog.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        }).show();
     }
 
     private void sendText() {
